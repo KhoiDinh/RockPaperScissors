@@ -1,0 +1,123 @@
+// Inputs: playAgain , user1, user2
+//Outputs: message for whoever wins and why
+// Loops the rock paper scissor game until user doesn't want to play anymore
+
+
+#include "stdafx.h"
+#include <iostream>
+#include <cctype>
+using namespace std;
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	// creates variables and set some to equal a value
+	char user1;
+	char user2;
+	char playAgain = 'y';
+	char other;
+	
+	
+	// loop to repeat game over and over until user enters 'N'
+	do
+	{
+		// input and outputs
+		cout << "User 1, enter R, P, or S, lowercase or uppercase: ";
+		cin >> user1;
+		user1 = toupper(user1);
+
+		cout << "User 2, enter R, P, or S, lowercase or uppercase: ";
+		cin >> user2;
+		user2 = toupper(user2);
+
+		
+		
+		// if/else statements to determine which output to produce in which situation
+		if (user1 == 'R')
+		{
+			if (user2 == 'P')
+			{
+				cout << "User 2 wins since paper covers rock." << endl;
+			}
+			else if (user2 == 'R')
+			{
+				cout << "Nobody wins." << endl;
+
+			}
+			else if (user2 == 'S')
+			{
+				cout << "User 1 wins since Rock breaks scissor." << endl;
+
+			}
+			else
+			{
+				cout << "Invalid input by user 2." << endl;
+			}
+
+		}
+		else if (user1 == 'S')
+		{
+			if (user2 == 'R')
+			{
+				cout << "User 2 wins since rock breaks scissor." << endl;
+
+			}
+			else if (user2 == 'S')
+			{
+				cout << "Nobody wins." << endl;
+
+			}
+			else if (user2 == 'P')
+			{
+				cout << "User 1 wins since Scissor cut paper." << endl;
+
+			}
+			else
+			{
+				cout << "Invalid input by user 2." << endl;
+			}
+
+		}
+		else if (user1 == 'P')
+		{
+			if (user2 == 'P')
+			{
+				cout << "Nobody wins." << endl;
+
+			}
+			else if (user2 == 'S' )
+			{
+				cout << "User 2 wins since scissors cut paper." << endl;
+
+			}
+			else if (user2 == 'R')
+			{
+				cout << "User 1 wins since paper covers rock." << endl;
+				
+			}
+			else
+			{
+				cout << "Invalid input by user 2." << endl;
+			}
+			
+		}
+		else 
+		{
+
+			cout << "Invalid input by user 1." << endl;
+			
+		}
+		
+		
+		
+
+		
+		// ask the user if want to play again after each round
+		cout << "Do you want to play again? ";
+		cin >> playAgain;
+	
+	}
+	while (playAgain == 'Y' || playAgain == 'y');// loop in charge of playing again
+
+	return 0;
+}
