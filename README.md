@@ -1,0 +1,2 @@
+# RockPaperScissors
+Write a program to score the rock-paper-scissor game. Each of two users types in either R,P, or S. The program then announces the winner as well as the basis for determining the winner: Paper covers rock, Rock breaks scissors, Scissors cut paper, or Nobody wins. Be sure to allow the user to use lowercase as well as uppercase letters. Your program should include a loop that lets the user play again until the user says she or he is done.
